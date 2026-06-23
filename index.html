@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ki-Chan Lee | Master's Student in Business and Economics | KAIST</title>
+	<style>
+		:root {
+			--ink: #1a1a1a;
+			--muted: #555;
+			--line: #e2e2e2;
+			--accent: #8a1c2b;       /* 차분한 적갈색 링크 */
+			--bg: #f7f6f1;           /* 크림빛 배경 */
+		}
+		* { box-sizing: border-box; }
+		html { -webkit-text-size-adjust: 100%; }
+		body {
+			margin: 0;
+			background: var(--bg);
+			color: var(--ink);
+			font-family: Georgia, "Times New Roman", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+			line-height: 1.7;
+			font-size: 18px;
+		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+
+		.layout {
+			max-width: 1080px;
+			margin: 0 auto;
+			padding: 64px 32px 96px;
+			display: grid;
+			grid-template-columns: 280px 1fr;
+			gap: 64px;
+			align-items: start;
+		}
+
+		/* ── Sidebar ── */
+		.sidebar { position: sticky; top: 48px; }
+		.avatar {
+			width: 100%;
+			max-width: 260px;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+			border-radius: 14px;
+			display: block;
+			margin-bottom: 24px;
+		}
+		.sidebar h1 {
+			font-size: 1.7rem;
+			margin: 0 0 12px;
+			letter-spacing: -0.01em;
+		}
+		.sidebar .affil { margin: 0; color: var(--ink); font-size: 1.02rem; line-height: 1.45; }
+		.sidebar .affil + .affil { margin-top: 6px; }
+
+		.contact { list-style: none; padding: 0; margin: 28px 0 0; }
+		.contact li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 1.02rem; }
+		.contact .ico { flex: 0 0 22px; text-align: center; color: var(--accent); }
+
+		/* ── Main ── */
+		.main { min-width: 0; }
+		.main .lead { font-size: 1.1rem; margin: 0 0 18px; }
+		.main h2 {
+			font-size: 1.55rem;
+			margin: 44px 0 18px;
+			letter-spacing: -0.01em;
+		}
+		.main h2:first-of-type { margin-top: 8px; }
+
+		.item { margin-bottom: 30px; }
+		.item .ptitle { font-weight: bold; font-size: 1.12rem; margin: 0 0 4px; }
+		.item p { margin: 0 0 3px; }
+		.item .venue { font-style: italic; }
+		.item .links { margin-top: 6px; }
+
+		footer {
+			grid-column: 1 / -1;
+			margin-top: 24px;
+			padding-top: 24px;
+			border-top: 1px solid var(--line);
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+
+		/* ── Mobile ── */
+		@media (max-width: 780px) {
+			.layout { grid-template-columns: 1fr; gap: 36px; padding: 40px 22px 64px; }
+			.sidebar { position: static; text-align: center; }
+			.avatar { margin: 0 auto 22px; }
+			.contact { display: inline-block; text-align: left; }
+			body { font-size: 17px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+
+		<!-- ── Sidebar ── -->
+		<aside class="sidebar">
+			<!-- 프로필 사진: Profile.jpg 를 저장소에 올리면 표시됨. 없으면 아래 img 한 줄 삭제 -->
+			<img class="avatar" src="Profile.jpg" alt="Ki-Chan Lee" />
+			<h1>Ki-Chan Lee</h1>
+			<p class="affil">Master's Student in Business and Economics</p>
+			<p class="affil">KAIST</p>
+
+			<ul class="contact">
+				<li><span class="ico">&#128196;</span><a href="https://drive.google.com/file/d/1ZNMtnykx36xi6-5cPEXR1R42q9VsyixP/view?usp=sharing" target="_blank" rel="noopener">CV (PDF)</a></li>
+				<li><span class="ico">&#9993;</span><a href="mailto:chanlee@kaist.ac.kr">chanlee@kaist.ac.kr</a></li>
+			</ul>
+		</aside>
+
+		<!-- ── Main ── -->
+		<main class="main">
+			<p class="lead">Hi everyone. Welcome to my homepage. My name is Ki-Chan Lee and I am a Master's course student of the College of Business at KAIST.</p>
+			<p class="lead">My research interests are in Industrial Organization, Labor, and Applied Econometrics. If you have any questions about me, feel free to contact <a href="mailto:chanlee@kaist.ac.kr">chanlee@kaist.ac.kr</a> :)</p>
+			<p class="lead">Hope you guys have a happy day!</p>
+
+			<h2>Work in Progress</h2>
+
+			<div class="item">
+				<p class="ptitle">Estimating the Causal Effect of Unionization on Recognized Workplace Accidents and Corporate Total Factor Productivity</p>
+				<p>with Seung-Hyeok Kim and Jin-Kyu Oh</p>
+			</div>
+
+			<div class="item">
+				<p class="ptitle">When Identity Moves Consumers: A Case of Baseball, A Question of Brands</p>
+				<p>with Seung-Hyeok Kim</p>
+			</div>
+
+			<h2>Pre-doctoral Publications</h2>
+
+			<div class="item">
+				<p class="ptitle">Do Geopolitical Shocks Move the Primary Market? Evidence from U.S. Treasury Auction Yields</p>
+				<p>with Jae-Kyu Song and Hye-Young Jung</p>
+				<p class="venue">Applied Economics Letters</p>
+				<p class="links"><a href="https://www.tandfonline.com/doi/full/10.1080/13504851.2026.2621125#abstract" target="_blank" rel="noopener">Publisher link</a></p>
+			</div>
+
+			<h2>Extra-Curricular Activity</h2>
+
+			<div class="item">
+				<p class="ptitle">한국재정학회 추계학술대회 논문 발표</p>
+				<p>"Do Geopolitical Shocks Move the Primary Market? Evidence from U.S. Treasury Auction Yields"</p>
+				<p class="links"><a href="http://kapf.or.kr/m/sub05-2_view.asp?page=1&amp;search_key=&amp;search_text=&amp;num=183&amp;sewhere=1" target="_blank" rel="noopener">Conference link</a></p>
+			</div>
+
+			<div class="item">
+				<p class="ptitle">한국노동연구원 사업체패널조사 학술대회 발표</p>
+				<p>"Estimating the Causal Effect of Unionization on Recognized Workplace Accidents and Corporate Total Factor Productivity"</p>
+				<p class="links"><a href="https://www.kli.re.kr/board.es?mid=a60104000000&amp;bid=0032&amp;act=view&amp;list_no=147858" target="_blank" rel="noopener">Conference link</a></p>
+			</div>
+		</main>
+
+		<footer>&copy; Ki-Chan Lee</footer>
+
+	</div>
+</body>
+</html>
